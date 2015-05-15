@@ -69,41 +69,57 @@ return newPhrase.join('');
 }
 
 
-
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
 // ---------------------
 
-function sum(){
-    return
-}
+function sum(numberArray){
+    var answer = numberArray.reduce(function(a,b) {
+        return a + b;
+    });
+    return answer;
+};
 
-function multiply(){
 
-}
+function multiply(numberArray2){
+    var answer = numberArray2.reduce(function(a,b) {
+        return a * b;
+    });
+    return answer;
+};
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse(){
-
-}
+function reverse(stringArray){
+    var answer = stringArray.split('').reverse().join('');
+    return answer;
+};
 
 // ---------------------
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
 // ---------------------
 
 function findLongestWord(words){
-    //...
-}
+   var longest = words.sort(function(a, b) {
+        return b.length - a.length;
+    })[0];
+   return longest;
+};
 
 // ---------------------
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
 // ---------------------
 
 function filterLongWords(words, i){
-    //...
+    wordsArray = [];
+    words.forEach(function(word) {
+        if (word.length > i) {
+            wordsArray.push(word);;
+        };
+    });
+    return wordsArray;
 }
 
 // ---------------------
@@ -111,5 +127,16 @@ function filterLongWords(words, i){
 // ---------------------
 
 function charFreq(string){
-    //...
-}
+    var frequency = new Object();
+    for (var i=0; i < string.length; i++) {
+        var character = string.charAt(i);
+    if(frequency[character]) {
+        frequency[character]++;
+    }
+    else {
+        frequency[character] = 1;
+    }
+  }
+  return frequency;
+};
+
