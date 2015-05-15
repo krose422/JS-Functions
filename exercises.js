@@ -10,7 +10,7 @@ function max(number1, number2){
         return number2
     }
     else {
-        return "Equal! Try two different numbers."
+        return "Try two different numbers."
     }
 }
 
@@ -18,36 +18,68 @@ function max(number1, number2){
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // ---------------------
 
-function maxOfThree(){
-    //...
+function maxOfThree(num1, num2, num3){
+    if (num1 > num2 && num1 > num3) {
+        return num1;
+    }
+
+    else if (num2 > num1 && num2 > num3) {
+        return num2;
+    }
+
+    else if (num3 > num1 && num3 > num2) {
+        return num3;
+    }
+
+    else {
+        "Oops! Enter three different numbers.";
+    }
 }
 
 // ---------------------
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 // ---------------------
 
+
 function isVowel(char){
-    //...
+    return "aeiou".indexOf(char) >= 0
 }
 
 // ---------------------
 // Write a function translate() that will translate a text into "rÃ¶varsprÃ¥ket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
 // ---------------------
 
+var newPhrase = [];
+
 function rovarspraket(phrase){
-    //...
+    var charArray = phrase.split('');
+    console.log(charArray);
+
+    charArray.forEach(function(letter) {
+        if ("aeiou ".indexOf(letter) < 0) {
+            newPhrase.push(letter + "o" + letter);
+        }
+        else if ("aeiou ".indexOf(letter) >= 0) {
+            newPhrase.push(letter);
+        }
+    })
+
+return newPhrase.join('');
+
 }
+
+
 
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
 // ---------------------
 
 function sum(){
-    //...
+    return
 }
 
 function multiply(){
-    //...
+
 }
 
 // ---------------------
@@ -55,7 +87,7 @@ function multiply(){
 // ---------------------
 
 function reverse(){
-    //...
+
 }
 
 // ---------------------
