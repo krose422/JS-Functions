@@ -1,0 +1,10 @@
+.leftbar {
+  float: left;
+  width: 27%;
+}
+
+.mainimage {
+  float: right;
+  width: 70%;
+  margin: 0;
+}

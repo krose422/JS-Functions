@@ -1,8 +1,52 @@
 body {
-  background-color: #ccf; }
+  font-family: 'Raleway', Helvetica, sans-serif;
+  font-size: 62.5%; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%; }
 
 h2 {
-  text-align: center;
+  text-align: left;
   margin-top: 100px;
   font-family: Helvetica, sans-serif;
-  font-size: 3em; }
+  font-size: 6vh;
+  font-family: 'Lobster', cursive;
+  margin-bottom: 2px; }
+
+h3 {
+  font-size: 3vh;
+  margin-top: 0px; }
+
+.leftbar {
+  width: 100%;
+  background-color: #B3C276;
+  font-size: 1.5em;
+  margin: auto;
+  border: 1px solid #ccc; }
+
+.leftbar p {
+  line-height: 150%;
+  padding: 1em; }
+
+.leftbar .share {
+  text-align: center;
+  padding: 0; }
+
+.leftbar a {
+  text-decoration: none;
+  color: white; }
+
+.leftbar a:hover {
+  text-decoration: underline; }
+
+.mainimage {
+  width: 100%;
+  display: block;
+  margin-top: 5em; }
+
+.mainimage img {
+  max-width: 100%;
+  height: auto;
+  text-align: center; }
