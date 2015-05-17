@@ -1,0 +1,66 @@
+
+body {
+  font-family: 'Raleway', Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+/* ---------- START HEADER STYLE ---------- */
+
+header {
+ background-image: url(Images/blurred-background.jpg);
+ height: 500px;
+}
+
+.headercontent {
+  width: 75%;
+  margin: auto;
+
+  .headerleft {
+    display: inline-block;
+    float: left;
+  }
+
+  nav {
+    display: inline-block;
+    float: right;
+
+    li {
+      list-style: none;
+      display: inline;
+    }
+  }
+}
+
+/* ---------- START QUESTION STYLE ---------- */
+
+.allquestions {
+  clear: both;
+}
+
+h3 {
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+}
+
+h5 {
+  font-size: 1em;
+
+}
+
+input {
+  font-size: 1em;
+  padding: 1em 1.8em;
+  margin: 0 0 1em 0;
+}
+
+.answer {
+  font-size: 1em;
+}

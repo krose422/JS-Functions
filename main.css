@@ -1,11 +1,11 @@
 body {
   font-family: 'Raleway', Helvetica, sans-serif;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  max-width: 1635px; }
 
-.wrapper {
-  height: 100%;
-  width: 100%;
-  background-image: url(Images/blurred-background.jpg); }
+.questions {
+  width: 75%;
+  margin: auto; }
 
 .container {
   margin-left: auto;
