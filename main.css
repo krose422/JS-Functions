@@ -30,21 +30,17 @@ h3 {
   font-size: 1.5em;
   margin: auto;
   border: 1px solid #ccc; }
-
-.leftbar p {
-  line-height: 150%;
-  padding: 1em; }
-
-.leftbar .share {
-  text-align: center;
-  padding: 0; }
-
-.leftbar a {
-  text-decoration: none;
-  color: white; }
-
-.leftbar a:hover {
-  text-decoration: underline; }
+  .leftbar p {
+    line-height: 150%;
+    padding: 1em; }
+  .leftbar .share {
+    text-align: center;
+    padding: 0; }
+  .leftbar a {
+    text-decoration: none;
+    color: white; }
+  .leftbar a:hover {
+    text-decoration: underline; }
 
 .mainimage {
   width: 100%;
@@ -71,7 +67,7 @@ h4 {
   font-size: 4em;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
   font-family: 'Lobster', cursive; }
 
