@@ -15,8 +15,8 @@ body {
 /* ---------- START HEADER STYLE ---------- */
 
 header {
- background-image: url(Images/blurred-background.jpg);
- height: 200px;
+ background-color: #B3C276;
+ height: 33em;
 }
 
 .headercontent {
@@ -31,10 +31,20 @@ header {
   nav {
     display: inline-block;
     float: right;
+    font-size: 1.6em;
 
     li {
       list-style: none;
       display: inline;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -42,24 +52,59 @@ header {
 /* ---------- START QUESTION STYLE ---------- */
 
 .allquestions {
-  clear: both;
-}
-
-h3 {
-  font-size: 2em;
+  width: 80%;
+  margin: auto;
+  margin-top: 5em;
+  font-size: 1.5em;
 }
 
 h5 {
-  font-size: 1em;
-
+  font-size: 1.6em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-input {
-  font-size: 1em;
-  padding: 1em 1.8em;
-  margin: 0 0 1em 0;
+#addBtn {
+  display: inline-block;
+  float: left;
+}
+
+#multiplyBtn {
+  display: inline-block;
+  float: left;
+}
+
+.question {
+  margin-top: 3em;
+  border-bottom: 1px solid #ccc;
 }
 
 .answer {
-  font-size: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  clear: both;
+}
+
+input {
+  padding-left: 1em;
+  padding-right: 2em;
+}
+
+.compareWord {
+  display: inline-block;
+  float: left;
+}
+
+.otherWords {
+  display: inline-block;
+  float: left;
+}
+
+.finalQuestion {
+  clear: both;
+}
+
+.submitBtn8 {
+  display: block;
+  clear: both;
 }

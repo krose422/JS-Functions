@@ -10,8 +10,8 @@
   <!-- Style Links -->
 
   <link rel="stylesheet" type="text/css" href="normalize.css">
-<!--   <link rel="stylesheet" type="text/css" href="main.css">
- -->  <link rel="stylesheet" type="text/css" href="forms.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="forms.css">
 
 </head>
 <body>
@@ -33,8 +33,9 @@
 
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="https://medium.com/@kelleyannerose">Blog</a></li>
+      <li><a href="index.html" target="_blank">Home</a></li>
+      <span> | </span>
+      <li><a href="https://medium.com/@kelleyannerose" target="_blank">Blog</a></li>
     </ul>
   </nav>
 
@@ -44,8 +45,6 @@
 
 <div class="allquestions">
 
-  <h3>Practicing JavaScript!</h3>
-
 <!-- ********** QUESTION 1 ********** -->
 
   <div class="question">
@@ -53,28 +52,40 @@
     <h5>Find out which number is larger.</h5>
 
     <input type="text" id="numOne" placeholder="Enter a number" />
-    <br /><br />
-    <input type="text" id="numTwo" placeholder="Enter a different number" />
-    <br /><br />
+      <br /><br />
+    <input type="text" id="numTwo" placeholder="Enter another number" />
+      <br /><br />
 
     <div>
-
       <input type="submit" value="Submit" id="submitBtn" />
-
     </div>
 
     <div class="answer">
-
       Answer: <span id="answer"></span>
-
     </div>
+
   </div>
 
 <!-- ********** QUESTION 2 ********** -->
 
   <div class="question">
 
-  <h5>Enter three numbers to find out which is the largest.</h5>
+    <h5>Enter three numbers to find out which is the largest.</h5>
+
+    <input type="text" id="numberOne" placeholder="Enter a number" />
+      <br /><br />
+    <input type="text" id="numberTwo" placeholder="Enter another number" />
+      <br /><br />
+    <input type="text" id="numberThree" placeholder="Enter one more number" />
+      <br /><br />
+
+    <div>
+      <input type="submit" value="Submit" id="submitBtn2" />
+    </div>
+
+    <div class="answer">
+      Answer: <span id="answer2"></span>
+    </div>
 
   </div>
 
@@ -82,7 +93,18 @@
 
   <div class="question">
 
-  <h5>Enter a character (one letter) to see if it is a vowel.</h5>
+    <h5>Find out if the letter you enter is a vowel.</h5>
+
+    <input type="text" id="letter" placeholder="Enter a letter" />
+        <br /><br />
+
+    <div>
+      <input type="submit" value="Submit" id="submitBtn3" />
+    </div>
+
+    <div class="answer">
+      Answer: <span id="answer3"></span>
+    </div>
 
   </div>
 
@@ -90,7 +112,18 @@
 
   <div class="question">
 
-  <h5>Enter a sentence to translate it to rÃ¶varsprÃ¥ket.</h5>
+    <h5>Enter a sentence to translate it to rÃ¶varsprÃ¥ket.</h5>
+
+    <input type="text" size="50" id="rovarspraket" placeholder="Enter a sentence" />
+      <br /><br />
+
+    <div>
+      <input type="submit" value="Submit" id="submitBtn4" />
+    </div>
+
+    <div class="answer">
+      Answer: <span id="answer4"></span>
+    </div>
 
   </div>
 
@@ -98,9 +131,32 @@
 
   <div class="question">
 
-  <h5>Enter numbers separated by commas to add them all together.</h5>
+  <h5>Add or multiply some numbers together.</h5>
 
-  <h5>Enter numbers separated by commas to multiply them all together.</h5>
+    <input type="text" id="num1" placeholder="Enter a number" />
+      <br /><br />
+    <input type="text" id="num2" placeholder="Enter a number" />
+      <br /><br />
+    <input type="text" id="num3" placeholder="Enter a number" />
+      <br /><br />
+    <input type="text" id="num4" placeholder="Enter a number" />
+      <br /><br />
+    <input type="text" id="num5" placeholder="Enter a number" />
+      <br /><br />
+    <input type="text" id="num6" placeholder="Enter a number" />
+      <br /><br />
+
+    <div>
+      <input type="submit" value="Add" id="addBtn" />
+    </div>
+
+    <div>
+      <input type="submit" value="Multiply" id="multiplyBtn" />
+    </div>
+
+    <div class="answer">
+      Answer: <span id="answer5"></span>
+    </div>
 
   </div>
 
@@ -108,7 +164,18 @@
 
   <div class="question">
 
-  <h5>Enter words to see the reverse of them.</h5>
+  <h5>See the reverse of any word.</h5>
+
+    <input type="text" id= "word" placeholder="Enter a word or sentence" />
+      <br /><br />
+
+    <div>
+      <input type="submit" value="Submit" id="submitBtn6" />
+    </div>
+
+    <div class="answer">
+      Answer: <span id="answer6"></span>
+    </div>
 
   </div>
 
@@ -116,7 +183,28 @@
 
   <div class="question">
 
-  <h5>Enter words (separated by commas) to see which is the longest.</h5>
+  <h5>Enter some words to see which is the longest.</h5>
+
+    <input type="text" id="word1" placeholder="Enter a word" />
+      <br /><br />
+    <input type="text" id="word2" placeholder="Enter a word" />
+      <br /><br />
+    <input type="text" id="word3" placeholder="Enter a word" />
+      <br /><br />
+    <input type="text" id="word4" placeholder="Enter a word" />
+      <br /><br />
+    <input type="text" id="word5" placeholder="Enter a word" />
+      <br /><br />
+    <input type="text" id="word6" placeholder="Enter a word" />
+      <br /><br />
+
+    <div>
+      <input type="submit" value="Submit" id="submitBtn7" />
+    </div>
+
+    <div class="answer">
+      Answer: <span id="answer7"></span>
+    </div>
 
   </div>
 
@@ -126,17 +214,53 @@
 
   <h5>See which words are longer than another word.</h5>
 
+    <div class="compareWord">
+    <input type="text" id="compareWord" placeholder="Enter one word">
+    </div>
+
+    <div class="otherWords">
+    <input type="text" id="otherWord1" placeholder="Enter a new word" />
+      <br /><br />
+    <input type="text" id="otherWord2" placeholder="Enter a new word" />
+      <br /><br />
+    <input type="text" id="otherWord3" placeholder="Enter a new word" />
+      <br /><br />
+    <input type="text" id="otherWord4" placeholder="Enter a new word" />
+      <br /><br />
+    <input type="text" id="otherWord5" placeholder="Enter a new word" />
+      <br /><br />
+    </div>
+
+    <div class="submitBtn8">
+      <input type="submit" value="Submit" id="submitBtn8" />
+    </div>
+
+    <div class="answer">
+      Answer: <span id="answer8"></span>
+    </div>
+
   </div>
 
 <!-- ********** QUESTION 9 ********** -->
 
   <div class="question">
+  <div class="finalQuestion">
 
-  <h5>Find out how many times each letter is used in any word. Enter a word.</h5>
+  <h5>Find out how many times each letter is used in any word.</h5>
+
+    <input type="text" id="lastWord" placeholder="Enter a word" />
+      <br /><br />
+
+    <div>
+      <input type="submit" value="Submit" id="submitBtn9" />
+    </div>
+
+    <div class="answer">
+      Answer: <span id="answer9"></span>
+    </div>
 
   </div>
-
-</div>
+  </div>
 
 </div>
 
