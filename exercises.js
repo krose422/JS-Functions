@@ -2,32 +2,56 @@
 // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in JavaScript.
 // ---------------------
 
+var answer = document.querySelector("#answer");
+var submitBtn = document.querySelector("#submitBtn");
+var numOne = document.querySelector("#numOne");
+var numTwo = document.querySelector("#numTwo");
+
 function max(number1, number2){
+    var number1 = Number(numOne.value);
+    var number2 = Number(numTwo.value);
     if (number1 > number2) {
+        answer.innerHTML = number1
         return number1
     }
     else if (number2 > number1) {
+        answer.innerHTML = number2
         return number2
     }
     else {
+        answer.innerHTML = "Try two different numbers."
         return "Try two different numbers."
     }
 }
+
+submitBtn.addEventListener("click", max);
 
 // ---------------------
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // ---------------------
 
+var answer = document.querySelector("#answer2");
+var submitBtn2 = document.querySelector("#submitBtn2");
+var numOne = document.querySelector("#num1");
+var numTwo = document.querySelector("#num2");
+var numThree = document.querySelector("num3");
+
 function maxOfThree(num1, num2, num3){
+    var num1 = Number(numOne.value);
+    var num2 = Number(numTwo.value);
+    var num3 = Number(numThree.value);
     if (num1 > num2 && num1 > num3) {
+        answer.innerHTML = num1;
         return num1;
     }
 
     else if (num2 > num1 && num2 > num3) {
+        answer.innerHTML = num2;
         return num2;
     }
 
     else if (num3 > num1 && num3 > num2) {
+        answer.innerHTML = num3;
         return num3;
     }
 
@@ -35,6 +59,8 @@ function maxOfThree(num1, num2, num3){
         "Oops! Enter three different numbers.";
     }
 }
+
+submitBtn2.addEventListener("click", maxOfThree);
 
 // ---------------------
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
