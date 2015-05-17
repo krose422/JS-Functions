@@ -1,99 +1,48 @@
-
-$green: #B3C276;
-
 body {
-  font-family: 'Raleway', Helvetica, sans-serif;
-  font-size: 62.5%;
-  max-width: 1635px;
-}
+  font-family: 'Raleway', Helvetica, sans-serif; }
 
-.questions {
+* {
+  box-sizing: border-box; }
+
+.wrapper {
+  width: 80%;
+  margin: auto; }
+
+/* ---------- START HEADER STYLE ---------- */
+header {
+  background-image: url(Images/blurred-background.jpg);
+  height: 200px; }
+
+.headercontent {
   width: 75%;
-  margin: auto;
-}
+  margin: auto; }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-}
+.headercontent .headerleft {
+  display: inline-block;
+  float: left; }
 
-h2 {
-  text-align: left;
-  margin-top: 100px;
-  font-family: Helvetica, sans-serif;
-  font-size: 6vh;
-  font-family: 'Lobster', cursive;
-  margin-bottom: 2px;
-}
+.headercontent nav {
+  display: inline-block;
+  float: right; }
+
+.headercontent nav li {
+  list-style: none;
+  display: inline; }
+
+/* ---------- START QUESTION STYLE ---------- */
+.allquestions {
+  clear: both; }
 
 h3 {
-  font-size: 3vh;
-  margin-top: 0px;
-}
+  font-size: 2em; }
 
-.leftbar {
-  width: 100%;
-  background-color: $green;
-  font-size: 1.5em;
-  margin: auto;
-  border: 1px solid #ccc;
+h5 {
+  font-size: 1em; }
 
-  p {
-    line-height: 150%;
-    padding: 1em;
-  }
+input {
+  font-size: 1em;
+  padding: 1em 1.8em;
+  margin: 0 0 1em 0; }
 
-  .share {
-    text-align: center;
-    padding: 0;
-  }
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-}
-
-.mainimage {
-  width: 100%;
-  display: block;
-  margin-top: 5em;
-  position: relative;
-
-  img {
-    max-width: 100%;
-    height: auto;
-    text-align: center;
-  }
-
-  .overlay {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(200, 200, 200, .5);
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-}
-
-h4 {
-  color: black;
-  text-align: center;
-  font-size: 4em;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  font-family: 'Lobster', cursive;
-}
-
-.mainimage:hover .overlay {
-  background: rgba(255, 255, 255, .7);
-}
-
+.answer {
+  font-size: 1em; }
