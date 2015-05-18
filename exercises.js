@@ -298,4 +298,23 @@ function charFreq(string){
 
 submitBtn9.addEventListener("click", charFreq);
 
+// ---------------------------------------------------------
+// How Tim did it in class
+// ---------------------------------------------------------
+
+// function charFreq(string) {
+//     var chars = string.split('');
+//     charList = {};
+
+//     chars.forEach( function (char) {
+//         if (charList[char] === undefined) {
+//             charList[char] = 1;
+//         } else {
+//             charList[char]++;
+//         }
+//     });
+
+//     return 'charList';
+// }
+
 
