@@ -90,6 +90,8 @@ submitBtn3.addEventListener("click", isVowel);
 // Write a function translate() that will translate a text into "rÃ¶varsprÃ¥ket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
 // ---------------------
 
+// Not clearing when I use this in my online form. Working code below.
+
 var answer4 = document.querySelector("#answer4");
 var submitBtn4 = document.querySelector("#submitBtn4");
 var rov = document.querySelector("#rov");
@@ -99,7 +101,6 @@ var newPhrase = [];
 function rovarspraket(phrase){
     var phraseInput = rov.value;
     var charArray = phraseInput.split('');
-    // console.log(charArray);
 
     charArray.forEach(function(letter) {
         if ("aeiou ".indexOf(letter) < 0) {
@@ -115,8 +116,30 @@ return newPhrase.join('');
 
 };
 
-
 submitBtn4.addEventListener("click", rovarspraket);
+
+// ---------------------------------------------------
+// Below is working code, not including DOM
+
+// var newPhrase = [];
+
+// function rovarspraket(phrase){
+//     var charArray = phrase.split('');
+//     console.log(charArray);
+
+//     charArray.forEach(function(letter) {
+//         if ("aeiou ".indexOf(letter) < 0) {
+//             newPhrase.push(letter + "o" + letter);
+//         }
+//         else if ("aeiou ".indexOf(letter) >= 0) {
+//             newPhrase.push(letter);
+//         }
+//     })
+
+// return newPhrase.join('');
+
+// }
+// ------------------------------------------------------
 
 
 // ---------------------
@@ -164,7 +187,8 @@ function multiply(numArray2){
 
 multiplyBtn.addEventListener("click", multiply);
 
-// working function below....
+// -------------------------------------------------------
+// Below is working code, not involving DOM
 
 // function multiply(numberArray2){
 //     var answer = numberArray2.reduce(function(a,b) {
@@ -172,6 +196,7 @@ multiplyBtn.addEventListener("click", multiply);
 //     });
 //     return answer;
 // };
+// -------------------------------------------------------
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
@@ -193,33 +218,66 @@ submitBtn6.addEventListener("click", reverse);
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
 // ---------------------
 
+var answer7 = document.querySelector("#answer7");
+var submitBtn7 = document.querySelector("#submitBtn7");
+var word1 = document.querySelector("#word1");
+var word2 = document.querySelector("#word2");
+var word3 = document.querySelector("#word3");
+var word4 = document.querySelector("#word4");
+var word5 = document.querySelector("#word5");
+var word6 = document.querySelector("#word6");
+
+
 function findLongestWord(words){
-   var longest = words.sort(function(a, b) {
+    var wordArray = [word1.value, word2.value, word3.value, word4.value, word5.value, word6.value];
+    var longest = wordArray.sort(function(a, b) {
         return b.length - a.length;
     })[0];
-   return longest;
+    answer7.innerHTML = longest;
+    return longest;
 };
+
+submitBtn7.addEventListener("click", findLongestWord);
 
 // ---------------------
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
 // ---------------------
 
+var answer8 = document.querySelector("#answer8");
+var submitBtn8 = document.querySelector("#submitBtn8");
+var compareWord = document.querySelector("#compareWord");
+var otherWord1 = document.querySelector("#otherWord1");
+var otherWord2 = document.querySelector("#otherWord2");
+var otherWord3 = document.querySelector("#otherWord3");
+var otherWord4 = document.querySelector("#otherWord4");
+var otherWord5 = document.querySelector("#otherWord5");
+
 function filterLongWords(words, i){
     wordsArray = [];
-    words.forEach(function(word) {
-        if (word.length > i) {
-            wordsArray.push(word);;
+        [otherWord1.value, otherWord2.value, otherWord3.value, otherWord4.value, otherWord5.value].forEach(function(word) {
+        if (word.length > compareWord.value.length) {
+            wordsArray.push(word);
         };
     });
+    answer8.innerHTML = wordsArray;
     return wordsArray;
 }
+
+submitBtn8.addEventListener("click", filterLongWords);
+
 
 // ---------------------
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 // ---------------------
 
+
+var answer9 = document.querySelector("#answer9");
+var submitBtn9 = document.querySelector("#submitBtn9");
+var lastWord = document.querySelector("#lastWord");
+
 function charFreq(string){
     var frequency = new Object();
+    var string = lastWord.value;
     for (var i=0; i < string.length; i++) {
         var character = string.charAt(i);
     if(frequency[character]) {
@@ -229,6 +287,10 @@ function charFreq(string){
         frequency[character] = 1;
     }
   }
+  answer9.innerHTML = JSON.stringify(frequency, null, 4);
   return frequency;
 };
+
+submitBtn9.addEventListener("click", charFreq);
+
 
