@@ -142,6 +142,8 @@ function sum(numArray){
     return answer;
 };
 
+addBtn.addEventListener("click", sum);
+
 var answer5b = document.querySelector("#answer5b");
 var multiplyBtn = document.querySelector("#multiplyBtn");
 var num1b = document.querySelector("#num1b");
@@ -151,7 +153,7 @@ var num4b = document.querySelector("#num4b");
 var num5b = document.querySelector("#num5b");
 var num6b = document.querySelector("#num6b");
 
-function multiply(numberArray2){
+function multiply(numArray2){
     var numberArray2 = [Number(num1b.value), Number(num2b.value), Number(num3b.value), Number(num4b.value), Number(num5b.value), Number(num6b.value)];
     var answerb = numberArray2.reduce(function(a,b) {
         return a * b;
@@ -160,17 +162,32 @@ function multiply(numberArray2){
     return answerb;
 };
 
-addBtn.addEventListener("click", sum);
 multiplyBtn.addEventListener("click", multiply);
+
+// working function below....
+
+// function multiply(numberArray2){
+//     var answer = numberArray2.reduce(function(a,b) {
+//         return a * b;
+//     });
+//     return answer;
+// };
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse(stringArray){
-    var answer = stringArray.split('').reverse().join('');
+var answer6 = document.querySelector("#answer6");
+var submitBtn7 = document.querySelector("#submitBtn6");
+var word1 = document.querySelector("#word");
+
+function reverse(string){
+    var answer = word.value.split('').reverse().join('');
+    answer6.innerHTML = answer;
     return answer;
 };
+
+submitBtn6.addEventListener("click", reverse);
 
 // ---------------------
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
