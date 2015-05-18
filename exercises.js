@@ -146,6 +146,11 @@ submitBtn4.addEventListener("click", rovarspraket);
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
 // ---------------------
 
+
+// -----------------------------------------------
+// NOTE FROM KELLEY: add is working with DOM, multiply not so much. Working code below my attempt to make it work with my HTML.
+
+
 var answer5a = document.querySelector("#answer5a");
 var addBtn = document.querySelector("#addBtn");
 var num1 = document.querySelector("#num1");
@@ -190,8 +195,8 @@ multiplyBtn.addEventListener("click", multiply);
 // -------------------------------------------------------
 // Below is working code, not involving DOM
 
-// function multiply(numberArray2){
-//     var answer = numberArray2.reduce(function(a,b) {
+// function multiply(numberArray){
+//     var answer = numberArray.reduce(function(a,b) {
 //         return a * b;
 //     });
 //     return answer;
