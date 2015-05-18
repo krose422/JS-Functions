@@ -80,6 +80,7 @@ h5 {
 .question {
   margin-top: 3em;
   border-bottom: 1px solid #ccc;
+  overflow: hidden;
 }
 
 .answer {
@@ -110,4 +111,22 @@ input {
 .submitBtn8 {
   display: block;
   clear: both;
+}
+
+.question5a {
+  display: inline-block;
+  float: left;
+}
+
+.question5b {
+  display: inline-block;
+  float: right;
+}
+
+.question6 {
+  clear: both;
+}
+
+.addBtn {
+  display: block;
 }

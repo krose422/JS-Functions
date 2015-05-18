@@ -7,7 +7,7 @@ var submitBtn = document.querySelector("#submitBtn");
 var numOne = document.querySelector("#numOne");
 var numTwo = document.querySelector("#numTwo");
 
-function max(number1, number2){
+function max(x, y){
     var number1 = Number(numOne.value);
     var number2 = Number(numTwo.value);
     if (number1 > number2) {
@@ -30,43 +30,76 @@ submitBtn.addEventListener("click", max);
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // ---------------------
 
+var answer2 = document.querySelector("#answer2");
+var submitBtn2 = document.querySelector("#submitBtn2");
+var numberOne = document.querySelector("#numberOne");
+var numberTwo = document.querySelector("#numberTwo");
+var numberThree = document.querySelector("#numberThree");
 
-function maxOfThree(num1, num2, num3){
+function maxOfThree(a, b, c){
+    var num1 = Number(numberOne.value);
+    var num2 = Number(numberTwo.value);
+    var num3 = Number(numberThree.value);
+
     if (num1 > num2 && num1 > num3) {
+        answer2.innerHTML = num1;
         return num1;
     }
 
     else if (num2 > num1 && num2 > num3) {
+        answer2.innerHTML = num2;
         return num2;
     }
 
     else if (num3 > num1 && num3 > num2) {
+        answer2.innerHTML = num3;
         return num3;
     }
 
     else {
-        "Oops! Enter three different numbers.";
+        answer2.innerHTML = "Oops! Enter three different numbers.";
+        return "Oops! Enter three different numbers.";
     }
 }
+
+submitBtn2.addEventListener("click", maxOfThree);
 
 // ---------------------
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 // ---------------------
 
+var answer3 = document.querySelector("#answer3");
+var submitBtn3 = document.querySelector("#submitBtn3");
+var letter = document.querySelector("#letter");
 
 function isVowel(char){
-    return "aeiou".indexOf(char) >= 0
+    var character = letter.value;
+    var answer = "aeiou".indexOf(character) >= 0
+    if (answer === true) {
+        answer3.innerHTML = "Yep! It's a vowel."
+    }
+    else {
+        answer3.innerHTML = "Nope. Not a vowel."
+    }
 }
+
+submitBtn3.addEventListener("click", isVowel);
+
 
 // ---------------------
 // Write a function translate() that will translate a text into "rÃ¶varsprÃ¥ket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
 // ---------------------
 
+var answer4 = document.querySelector("#answer4");
+var submitBtn4 = document.querySelector("#submitBtn4");
+var rov = document.querySelector("#rov");
+
 var newPhrase = [];
 
 function rovarspraket(phrase){
-    var charArray = phrase.split('');
-    console.log(charArray);
+    var phraseInput = rov.value;
+    var charArray = phraseInput.split('');
+    // console.log(charArray);
 
     charArray.forEach(function(letter) {
         if ("aeiou ".indexOf(letter) < 0) {
@@ -75,40 +108,86 @@ function rovarspraket(phrase){
         else if ("aeiou ".indexOf(letter) >= 0) {
             newPhrase.push(letter);
         }
-    })
+    });
 
+answer4.innerHTML = newPhrase.join('');
 return newPhrase.join('');
 
-}
+};
+
+
+submitBtn4.addEventListener("click", rovarspraket);
 
 
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
 // ---------------------
 
-function sum(numberArray){
+var answer5a = document.querySelector("#answer5a");
+var addBtn = document.querySelector("#addBtn");
+var num1 = document.querySelector("#num1");
+var num2 = document.querySelector("#num2");
+var num3 = document.querySelector("#num3");
+var num4 = document.querySelector("#num4");
+var num5 = document.querySelector("#num5");
+var num6 = document.querySelector("#num6");
+
+
+function sum(numArray){
+    var numberArray = [Number(num1.value), Number(num2.value), Number(num3.value), Number(num4.value), Number(num5.value), Number(num6.value)];
     var answer = numberArray.reduce(function(a,b) {
         return a + b;
     });
+    answer5a.innerHTML = answer;
     return answer;
 };
 
+addBtn.addEventListener("click", sum);
 
-function multiply(numberArray2){
-    var answer = numberArray2.reduce(function(a,b) {
+var answer5b = document.querySelector("#answer5b");
+var multiplyBtn = document.querySelector("#multiplyBtn");
+var num1b = document.querySelector("#num1b");
+var num2b = document.querySelector("#num2b");
+var num3b = document.querySelector("#num3b");
+var num4b = document.querySelector("#num4b");
+var num5b = document.querySelector("#num5b");
+var num6b = document.querySelector("#num6b");
+
+function multiply(numArray2){
+    var numberArray2 = [Number(num1b.value), Number(num2b.value), Number(num3b.value), Number(num4b.value), Number(num5b.value), Number(num6b.value)];
+    var answerb = numberArray2.reduce(function(a,b) {
         return a * b;
     });
-    return answer;
+    answer5b.innerHTML = answerb;
+    return answerb;
 };
+
+multiplyBtn.addEventListener("click", multiply);
+
+// working function below....
+
+// function multiply(numberArray2){
+//     var answer = numberArray2.reduce(function(a,b) {
+//         return a * b;
+//     });
+//     return answer;
+// };
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse(stringArray){
-    var answer = stringArray.split('').reverse().join('');
+var answer6 = document.querySelector("#answer6");
+var submitBtn7 = document.querySelector("#submitBtn6");
+var word1 = document.querySelector("#word");
+
+function reverse(string){
+    var answer = word.value.split('').reverse().join('');
+    answer6.innerHTML = answer;
     return answer;
 };
+
+submitBtn6.addEventListener("click", reverse);
 
 // ---------------------
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
