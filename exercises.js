@@ -193,12 +193,26 @@ submitBtn6.addEventListener("click", reverse);
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
 // ---------------------
 
+var answer7 = document.querySelector("#answer7");
+var submitBtn7 = document.querySelector("#submitBtn7");
+var word1 = document.querySelector("#word1");
+var word2 = document.querySelector("#word2");
+var word3 = document.querySelector("#word3");
+var word4 = document.querySelector("#word4");
+var word5 = document.querySelector("#word5");
+var word6 = document.querySelector("#word6");
+
+
 function findLongestWord(words){
-   var longest = words.sort(function(a, b) {
+    var wordArray = [word1.value, word2.value, word3.value, word4.value, word5.value, word6.value];
+    var longest = wordArray.sort(function(a, b) {
         return b.length - a.length;
     })[0];
-   return longest;
+    answer7.innerHTML = longest;
+    return longest;
 };
+
+submitBtn7.addEventListener("click", findLongestWord);
 
 // ---------------------
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
