@@ -118,6 +118,29 @@ return newPhrase.join('');
 
 submitBtn4.addEventListener("click", rovarspraket);
 
+// ---------------------------------------------------
+// Below is working code, not including DOM
+
+// var newPhrase = [];
+
+// function rovarspraket(phrase){
+//     var charArray = phrase.split('');
+//     console.log(charArray);
+
+//     charArray.forEach(function(letter) {
+//         if ("aeiou ".indexOf(letter) < 0) {
+//             newPhrase.push(letter + "o" + letter);
+//         }
+//         else if ("aeiou ".indexOf(letter) >= 0) {
+//             newPhrase.push(letter);
+//         }
+//     })
+
+// return newPhrase.join('');
+
+// }
+// ------------------------------------------------------
+
 
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
@@ -164,7 +187,8 @@ function multiply(numArray2){
 
 multiplyBtn.addEventListener("click", multiply);
 
-// working function below....
+// -------------------------------------------------------
+// Below is working code, not involving DOM
 
 // function multiply(numberArray2){
 //     var answer = numberArray2.reduce(function(a,b) {
@@ -172,6 +196,7 @@ multiplyBtn.addEventListener("click", multiply);
 //     });
 //     return answer;
 // };
+// -------------------------------------------------------
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
