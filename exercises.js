@@ -90,6 +90,8 @@ submitBtn3.addEventListener("click", isVowel);
 // Write a function translate() that will translate a text into "rÃ¶varsprÃ¥ket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
 // ---------------------
 
+// Not clearing when I use this in my online form. Working code below.
+
 var answer4 = document.querySelector("#answer4");
 var submitBtn4 = document.querySelector("#submitBtn4");
 var rov = document.querySelector("#rov");
@@ -99,7 +101,6 @@ var newPhrase = [];
 function rovarspraket(phrase){
     var phraseInput = rov.value;
     var charArray = phraseInput.split('');
-    // console.log(charArray);
 
     charArray.forEach(function(letter) {
         if ("aeiou ".indexOf(letter) < 0) {
@@ -114,7 +115,6 @@ answer4.innerHTML = newPhrase.join('');
 return newPhrase.join('');
 
 };
-
 
 submitBtn4.addEventListener("click", rovarspraket);
 
@@ -218,22 +218,41 @@ submitBtn7.addEventListener("click", findLongestWord);
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
 // ---------------------
 
+var answer8 = document.querySelector("#answer8");
+var submitBtn8 = document.querySelector("#submitBtn8");
+var compareWord = document.querySelector("#compareWord");
+var otherWord1 = document.querySelector("#otherWord1");
+var otherWord2 = document.querySelector("#otherWord2");
+var otherWord3 = document.querySelector("#otherWord3");
+var otherWord4 = document.querySelector("#otherWord4");
+var otherWord5 = document.querySelector("#otherWord5");
+
 function filterLongWords(words, i){
     wordsArray = [];
-    words.forEach(function(word) {
-        if (word.length > i) {
-            wordsArray.push(word);;
+        [otherWord1.value, otherWord2.value, otherWord3.value, otherWord4.value, otherWord5.value].forEach(function(word) {
+        if (word.length > compareWord.value.length) {
+            wordsArray.push(word);
         };
     });
+    answer8.innerHTML = wordsArray;
     return wordsArray;
 }
+
+submitBtn8.addEventListener("click", filterLongWords);
+
 
 // ---------------------
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 // ---------------------
 
+
+var answer9 = document.querySelector("#answer9");
+var submitBtn9 = document.querySelector("#submitBtn9");
+var lastWord = document.querySelector("#lastWord");
+
 function charFreq(string){
     var frequency = new Object();
+    var string = lastWord.value;
     for (var i=0; i < string.length; i++) {
         var character = string.charAt(i);
     if(frequency[character]) {
@@ -243,6 +262,10 @@ function charFreq(string){
         frequency[character] = 1;
     }
   }
+  answer9.innerHTML = JSON.stringify(frequency, null, 4);
   return frequency;
 };
+
+submitBtn9.addEventListener("click", charFreq);
+
 
