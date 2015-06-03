@@ -8,15 +8,15 @@ var numOne = document.querySelector("#numOne");
 var numTwo = document.querySelector("#numTwo");
 
 function max(x, y){
-    var number1 = Number(numOne.value);
-    var number2 = Number(numTwo.value);
-    if (number1 > number2) {
-        answer.innerHTML = number1
-        return number1
+    x = Number(numOne.value);
+    y = Number(numTwo.value);
+    if (x > y) {
+        answer.innerHTML = x
+        return x
     }
-    else if (number2 > number1) {
-        answer.innerHTML = number2
-        return number2
+    else if (y > x) {
+        answer.innerHTML = y
+        return y
     }
     else {
         answer.innerHTML = "Try two different numbers."
@@ -57,7 +57,7 @@ function maxOfThree(a, b, c){
     }
 
     else {
-        answer2.innerHTML = "Oops! Enter three different numbers.";
+        answer2.innerHTML = "Oops! Enter three <em>different</em> numbers.";
         return "Oops! Enter three different numbers.";
     }
 }
