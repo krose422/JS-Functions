@@ -1,3 +1,15 @@
+// Clear fields on input click
+
+function clear (inputID, answerID) {
+    inputID.addEventListener('focus', function () {
+        inputID.value = '';
+        if (answerID.innerHTML !== '') {
+            answerID.innerHTML = '';
+        }
+    });
+}
+
+
 // ---------------------
 // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in JavaScript.
 // ---------------------
@@ -8,22 +20,24 @@ var numOne = document.querySelector("#numOne");
 var numTwo = document.querySelector("#numTwo");
 
 function max(x, y){
-    var number1 = Number(numOne.value);
-    var number2 = Number(numTwo.value);
-    if (number1 > number2) {
-        answer.innerHTML = number1
-        return number1
+    x = Number(numOne.value);
+    y = Number(numTwo.value);
+    if (x > y) {
+        answer.innerHTML = x
+        return x
     }
-    else if (number2 > number1) {
-        answer.innerHTML = number2
-        return number2
+    else if (y > x) {
+        answer.innerHTML = y
+        return y
     }
     else {
         answer.innerHTML = "Try two different numbers."
-        return "Try two different numbers."
     }
+
 }
 
+clear(numOne, answer);
+clear(numTwo, answer);
 submitBtn.addEventListener("click", max);
 
 // ---------------------
@@ -57,11 +71,13 @@ function maxOfThree(a, b, c){
     }
 
     else {
-        answer2.innerHTML = "Oops! Enter three different numbers.";
-        return "Oops! Enter three different numbers.";
+        answer2.innerHTML = "Oops! Enter three <em>different</em> numbers.";
     }
 }
 
+clear(numberOne, answer2);
+clear(numberTwo, answer2);
+clear(numberThree, answer2);
 submitBtn2.addEventListener("click", maxOfThree);
 
 // ---------------------
@@ -83,6 +99,7 @@ function isVowel(char){
     }
 }
 
+clear(letter, answer3);
 submitBtn3.addEventListener("click", isVowel);
 
 
@@ -110,12 +127,10 @@ function rovarspraket(phrase){
             newPhrase.push(letter);
         }
     });
-
-answer4.innerHTML = newPhrase.join('');
-return newPhrase.join('');
-
+    answer4.innerHTML = newPhrase.join('');
 };
 
+clear(rov, answer4);
 submitBtn4.addEventListener("click", rovarspraket);
 
 // ---------------------------------------------------
@@ -163,13 +178,19 @@ var num6 = document.querySelector("#num6");
 
 function sum(numArray){
     var numberArray = [Number(num1.value), Number(num2.value), Number(num3.value), Number(num4.value), Number(num5.value), Number(num6.value)];
-    var answer = numberArray.reduce(function(a,b) {
+    var answer = numberArray.reduce(function(a, b) {
         return a + b;
     });
+
     answer5a.innerHTML = answer;
-    return answer;
 };
 
+clear(num1, answer5a);
+clear(num2, answer5a);
+clear(num3, answer5a);
+clear(num4, answer5a);
+clear(num5, answer5a);
+clear(num6, answer5a);
 addBtn.addEventListener("click", sum);
 
 var answer5b = document.querySelector("#answer5b");
@@ -182,26 +203,22 @@ var num5b = document.querySelector("#num5b");
 var num6b = document.querySelector("#num6b");
 
 function multiply(numArray2){
+
     var numberArray2 = [Number(num1b.value), Number(num2b.value), Number(num3b.value), Number(num4b.value), Number(num5b.value), Number(num6b.value)];
-    var answerb = numberArray2.reduce(function(a,b) {
+    var answerb = numberArray2.reduce(function(a, b) {
         return a * b;
     });
     answer5b.innerHTML = answerb;
-    return answerb;
 };
 
+clear(num1b, answer5b);
+clear(num2b, answer5b);
+clear(num3b, answer5b);
+clear(num4b, answer5b);
+clear(num5b, answer5b);
+clear(num6b, answer5b);
 multiplyBtn.addEventListener("click", multiply);
 
-// -------------------------------------------------------
-// Below is working code, not involving DOM
-
-// function multiply(numberArray){
-//     var answer = numberArray.reduce(function(a,b) {
-//         return a * b;
-//     });
-//     return answer;
-// };
-// -------------------------------------------------------
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
@@ -214,9 +231,9 @@ var word1 = document.querySelector("#word");
 function reverse(string){
     var answer = word.value.split('').reverse().join('');
     answer6.innerHTML = answer;
-    return answer;
 };
 
+clear(word1, answer6);
 submitBtn6.addEventListener("click", reverse);
 
 // ---------------------
@@ -239,9 +256,14 @@ function findLongestWord(words){
         return b.length - a.length;
     })[0];
     answer7.innerHTML = longest;
-    return longest;
 };
 
+clear(word1, answer7);
+clear(word2, answer7);
+clear(word3, answer7);
+clear(word4, answer7);
+clear(word5, answer7);
+clear(word6, answer7);
 submitBtn7.addEventListener("click", findLongestWord);
 
 // ---------------------
@@ -265,9 +287,14 @@ function filterLongWords(words, i){
         };
     });
     answer8.innerHTML = wordsArray;
-    return wordsArray;
 }
 
+clear(compareWord, answer8);
+clear(otherWord1, answer8);
+clear(otherWord2, answer8);
+clear(otherWord3, answer8);
+clear(otherWord4, answer8);
+clear(otherWord5, answer8);
 submitBtn8.addEventListener("click", filterLongWords);
 
 
@@ -293,9 +320,9 @@ function charFreq(string){
     }
   }
   answer9.innerHTML = JSON.stringify(frequency, null, 4);
-  return frequency;
 };
 
+clear(lastWord, answer9);
 submitBtn9.addEventListener("click", charFreq);
 
 

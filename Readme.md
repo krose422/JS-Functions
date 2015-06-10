@@ -1,3 +1,5 @@
-## Assignment 7 - Part 2
-### Due May 18 by 8am
-#### JS Exercises
+## JavaScript Exercises
+
+### Kelley Rose's Work
+
+Using vanilla JavaScript, I completed the commented out exercises and then created a web page to illustrate them real time.
